@@ -1,0 +1,16 @@
+<view class = "title"> 
+  <text>{{"功能选择"}}</text>
+</view>
+<view class="buttonGroup">
+  <button type="primary" bindtap="doublePK">双人</button>
+  <button type="primary" bindtap="multipleChoseWinner">多人选胜</button>
+  <button type="primary" bindtap="multipleChoseLoser">多人选负</button>
+  <button type="primary" bindtap="manVsMachine">人机</button>
+</view>
+<!-- <button type="primary" bindtap="doublePK">双人</button>
+<button type="primary" bindtap="multipleChoseWinner">多人选胜</button>
+<button type="primary" bindtap="multipleChoseLoser">多人选负</button>
+<button type="primary" bindtap="manVsMachine">人机</button> -->
+
+        
+
