@@ -12,5 +12,8 @@
 <button type="primary" bindtap="multipleChoseLoser">多人选负</button>
 <button type="primary" bindtap="manVsMachine">人机</button> -->
 
+
+
+
         
 

@@ -1,0 +1,6 @@
+.flow{
+  display: flex;
+}
+.flow1{
+  align-items: center;
+}

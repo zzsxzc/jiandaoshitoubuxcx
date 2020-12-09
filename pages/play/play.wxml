@@ -1,0 +1,76 @@
+<view class="section">
+  <view class="flow">
+      <view class="flow1">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{playerArray[0].text}}
+        </view>
+      </picker>
+      <input placeholder="1号"/>
+      </view>
+      <view class="flow1">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{playerArray[0].text}}
+        </view>
+      </picker>
+      <input placeholder="2号"/>
+      </view>
+  </view>
+</view>
+<view class="section">
+  <view class="flow">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+  </view>
+</view>
+<view class="section">
+  <view class="flow">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+  </view>
+</view>
+<view class="section">
+  <view class="flow">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+  </view>
+</view>
+<view class="section">
+  <view class="flow">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+    </picker>
+  </view>
+</view>
