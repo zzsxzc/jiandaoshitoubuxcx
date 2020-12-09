@@ -2,5 +2,12 @@
   display: flex;
 }
 .flow1{
+  width: 50%;
   align-items: center;
+}
+.picker{
+  text-align: center;
+}
+.describetext{
+  text-align: center;
 }
