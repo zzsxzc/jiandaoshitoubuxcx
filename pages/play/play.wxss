@@ -1,5 +1,12 @@
+.space{
+  height: 60rpx;
+}
+.space2{
+  height: 40rpx;
+}
 .flow{
   display: flex;
+  margin: 30rpx;
 }
 .flow1{
   width: 50%;
@@ -9,5 +16,13 @@
   text-align: center;
 }
 .describetext{
+  text-align: center;
+}
+
+.buttonGroup{
+  margin: 50rpx;
+}
+button {margin: 10px;}
+.resultText{
   text-align: center;
 }

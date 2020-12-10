@@ -1,24 +1,130 @@
+<view class="space"></view>
 <view class="flow">
-  <view class="flow1">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker">
+
+  <view class="flow1" wx:if="{{ifshow1}}">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+      <view class="picker" >
         {{playerArray[0].text}}
       </view>
     </picker>
     <view class="describetext">
     <text>1号</text>
+    </view>
   </view>
+
+  <view class="flow1" wx:if="{{ifshow2}}">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+      <view class="picker">
+        {{playerArray[0].text}}
+      </view>
+    </picker>
+    <view class="describetext">
+      <text>2号</text>
+    </view>
   </view>
-  <view class="flow1">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+</view>
+
+<view class="flow">
+<view class="flow1"  wx:if="{{ifshow3}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
     <view class="picker">
       {{playerArray[0].text}}
     </view>
   </picker>
   <view class="describetext">
-    <text>2号</text>
+  <text>3号</text>
   </view>
-  
+</view>
+
+<view class="flow1"  wx:if="{{ifshow4}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+    <text>4号</text>
   </view>
+</view>
+</view>
+
+<view class="flow">
+
+<view class="flow1"  wx:if="{{ifshow5}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+  <text>5号</text>
+  </view>
+</view>
+
+<view class="flow1"  wx:if="{{ifshow6}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+    <text>6号</text>
+  </view>
+</view>
+</view>
+
+<view class="flow">
+
+<view class="flow1"  wx:if="{{ifshow7}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+  <text>7号</text>
+  </view>
+</view>
+
+<view class="flow1"  wx:if="{{ifshow8}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+    <text>8号</text>
+  </view>
+</view>
+</view>
+
+<view class="flow">
+
+<view class="flow1"  wx:if="{{ifshow9}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+  <text>9号</text>
+  </view>
+</view>
+
+<view class="flow1"  wx:if="{{ifshow10}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <view class="picker">
+      {{playerArray[0].text}}
+    </view>
+  </picker>
+  <view class="describetext">
+    <text>10号</text>
+  </view>
+</view>
+</view>
+<view class="space2"></view>
+<view class="resultText"><text id="resultText">{{resultText}}</text></view>
+<view class="buttonGroup">
+  <button type="primary" bindtap="getResult">开</button>
 </view>
   

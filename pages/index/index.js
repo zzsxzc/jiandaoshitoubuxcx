@@ -1,7 +1,9 @@
 Page({
   //跳转至双人对战界面
   doublePK() {
-  
+    wx.navigateTo({
+      url: '../play/play',
+    })
   },
   //跳转至多人选胜界面
   multipleChoseWinner() {
