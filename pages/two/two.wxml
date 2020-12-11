@@ -1,0 +1,34 @@
+<view class="space"></view>
+<view class="flow">
+
+  <view class="flow1" wx:if="{{ifshow1}}">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{realArray}}" disabled="{{disabledq}}">
+      <view class="picker" >
+        {{playerArray[0].text}}
+      </view>
+    </picker>
+    <view class="describetext">
+    <text>1号</text>
+    </view>
+  </view>
+
+  <view class="flow1" wx:if="{{ifshow2}}">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{realArray}}" disabled="{{disabledq}}">
+      <view class="picker">
+        {{playerArray[0].text}}
+      </view>
+    </picker>
+    <view class="describetext">
+      <text>2号</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="space2"></view>
+<view class="resultText"><text id="resultText">{{resultText}}</text></view>
+<view class="buttonGroup">
+  <button type="primary" bindtap="getResult">开</button>
+  <button type="primary" bindtap="getResult">重置</button>
+</view>
+  

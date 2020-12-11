@@ -1,20 +1,16 @@
+var app = getApp();
 Page({
-  //跳转至双人对战界面
-  doublePK() {
+  //跳转至双人界面
+  doublePK() { 
+    wx.navigateTo({
+      url: '../two/two',
+    })
+  },
+  //跳转至多人界面
+  multipleChoseWinner() {
     wx.navigateTo({
       url: '../play/play',
     })
   },
-  //跳转至多人选胜界面
-  multipleChoseWinner() {
-    
-  },
-  //跳转至多人选负界面
-  multipleChoseLoser() {
-    
-  },
-  //跳转至人机对战界面
-  manVsMachine() {
-    
-  }
+
 })

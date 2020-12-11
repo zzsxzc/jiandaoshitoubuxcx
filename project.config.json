@@ -66,6 +66,12 @@
           "pathName": "pages/play/play",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "双人pk页",
+          "pathName": "pages/two/two",
+          "query": "",
+          "scene": null
         }
       ]
     }
