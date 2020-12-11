@@ -1,13 +1,18 @@
 Page({
   data: {
-    index: "点击选择",
+    value1:"未选择",
+    value2:"未选择",
+    text1:"点击选择",
+    text2:"点击选择",
+    isopend:false,
+    pickercolor1:"#00BFFF",
+    pickercolor2:"#00BFFF",
+    index: 0,
     resultText: "结果展示",
-    disabledq:false,
+    disabled1:false,
+    disabled2:false,
     playerNumber:2,
     start:1,
-    array: ['剪刀', '石头', '布'],
-    array2: ['石头', '布', '剪刀'],
-    array3: ['布', '剪刀', '石头'],
     realArray:[],
     ifshow1:true,
     ifshow2:true,
@@ -84,13 +89,26 @@ Page({
         id: 2,
         name: '布'
       }
-    ]
+    ],
+    
   },
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+  bindPickerChange1: function (e) {
     this.setData({
-      index: e.detail.value
+      text1: "选择完成",
+      value1:this.data.realArray[e.detail.value],
+      pickercolor1:"	#FF69B4",
+      disabled1:true
     })
+    this.randomThree();
+  },
+  bindPickerChange2: function (e) {
+    this.setData({
+      text2: "选择完成",
+      value2:this.data.realArray[e.detail.value],
+      pickercolor2:"	#FF69B4",
+      disabled2:true
+    })
+    this.randomThree();
   },
   randomThree(){
     var start = Math.floor(Math.random()*3);
@@ -102,14 +120,69 @@ Page({
       this.setData({realArray:['布', '剪刀', '石头']});
     }
   },
-  //跳转至多人选负界面
+  //开
   getResult() {
+    if(!this.data.isopend){
+      if(this.data.value1=="未选择"||this.data.value2=="未选择"){
+        wx.showModal({
+          title:"提示",
+          content:"存在用户未选择！是否继续开？",
+          success:(res)=>{
+            if(res.confirm){
+              this.setData({
+                text1: this.data.value1,
+                text2: this.data.value2,
+                resultText:"存在未输入者，不进行结果计算！",
+                isopend:true
+              })
+            }
+          }
+        })
+      }else{
+          var result;
+          if(this.data.value1=="剪刀"&&this.data.value2=="剪刀"||this.data.value1=="石头"&&this.data.value2=="石头"||this.data.value1=="布"&&this.data.value2=="布"){
+            result="平局。"
+            this.setData({
+              text1: this.data.value1,
+              text2: this.data.value2,
+              resultText:result,
+              isopend:true
+            })
+          }else if(this.data.value1=="剪刀"&&this.data.value2=="布"||this.data.value1=="石头"&&this.data.value2=="剪刀"||this.data.value1=="布"&&this.data.value2=="石头"){
+            result="1号胜！"
+            this.setData({
+              text1: this.data.value1,
+              text2: this.data.value2,
+              resultText:result,
+              isopend:true
+            })
+          }else{
+            result="2号胜！"
+            this.setData({
+              text1: this.data.value1,
+              text2: this.data.value2,
+              resultText:result,
+              isopend:true
+            })
+          }
+    }
     
+    }
   },
-  //跳转至人机对战界面
-  fromHome() {
-    wx.navigateTo({
-      url: '../index/index',
+  //重置
+  reStart:function() {
+    this.setData({
+      value1:"未选择",
+      value2:"未选择",
+      text1:"点击选择",
+      text2:"点击选择",
+      isopend:false,
+      pickercolor1:"#00BFFF",
+      pickercolor2:"#00BFFF",
+      index: 0,
+      resultText: "结果展示",
+      disabled1:false,
+      disabled2:false,
     })
   },
   onLoad:function(){
