@@ -1,4 +1,5 @@
 <view class="space"></view>
+<view class="imagebox"><image src="/images/sdjdb2.png"  class="image1"></image></view>
 <view class="buttonGroup">
   <button type="primary" bindtap="doublePK">双人</button>
   <button type="primary" bindtap="multipleChoseWinner">多人</button>

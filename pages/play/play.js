@@ -60,6 +60,7 @@ Page({
     ifshowjg:false,
     ifshowkai:false,
     ifshowcz:false,
+    ifopen:false,
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -79,28 +80,36 @@ Page({
   },
   
   getResult() {
-    wx.showModal({
-      title:"提示",
-      content:"是否确定开？",
-      success:(res)=>{
-        if(res.confirm){
-          this.setData({
-            text1: this.data.value1,
-            text2: this.data.value2,
-            text3: this.data.value3,
-            text4: this.data.value4,
-            text5: this.data.value5,
-            text6: this.data.value6,
-            text7: this.data.value7,
-            text8: this.data.value8,
-            text9: this.data.value9,
-            text10: this.data.value10,
-            resultText:"多人不提供结果计算，请根据结果自行选择下一步操作"
-          })
+    if(!this.data.isopen){
+      wx.showModal({
+        title:"提示",
+        content:"是否确定开？",
+        success:(res)=>{
+          if(res.confirm){
+            this.setData({
+              isopen:true,
+              text1: this.data.value1,
+              text2: this.data.value2,
+              text3: this.data.value3,
+              text4: this.data.value4,
+              text5: this.data.value5,
+              text6: this.data.value6,
+              text7: this.data.value7,
+              text8: this.data.value8,
+              text9: this.data.value9,
+              text10: this.data.value10,
+              resultText:"多人不提供结果计算，请根据结果自行选择下一步操作"
+            })
+          }
         }
-      }
-    })
-    
+      })
+    }else{
+      wx.showToast({
+        title: '已开',
+        icon: 'none',
+        duration: 1000
+      })
+    }
   },
   reStart() {
     wx.showModal({
@@ -165,6 +174,7 @@ Page({
             ifshowjg:false,
             ifshowkai:false,
             ifshowcz:false,
+            isopen:false
           })
         }
       }

@@ -1,5 +1,5 @@
 .space{
-  height: 300rpx;
+  height: 80rpx;
 }
 .title{
   margin: 40rpx;
@@ -17,6 +17,13 @@
   background-color: blue;
 }
 button {margin: 10px;}
+.image1{
+  height: 500rpx;
+  width: 500rpx;
+}
+.imagebox{
+  text-align: center;
+}
 
 
 
