@@ -96,7 +96,7 @@ Page({
     this.setData({
       text1: "选择完成",
       value1:this.data.realArray[e.detail.value],
-      pickercolor1:"	#FF69B4",
+      pickercolor1:"#FF69B4",
       disabled1:true
     })
     this.randomThree();
@@ -105,7 +105,7 @@ Page({
     this.setData({
       text2: "选择完成",
       value2:this.data.realArray[e.detail.value],
-      pickercolor2:"	#FF69B4",
+      pickercolor2:"#FF69B4",
       disabled2:true
     })
     this.randomThree();

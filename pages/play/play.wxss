@@ -25,4 +25,8 @@
 button {margin: 10px;}
 .resultText{
   text-align: center;
+  color:	#FF4500;
+}
+.spacefz{
+  height: 500rpx;
 }

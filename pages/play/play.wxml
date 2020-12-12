@@ -2,9 +2,9 @@
 <view class="flow">
 
   <view class="flow1" wx:if="{{ifshow1}}">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <picker bindchange="bindPickerChange1" value="{{index}}" range="{{realArray}}" disabled="{{disabled1}}">
       <view class="picker" >
-        {{playerArray[0].text}}
+        <text class="pickertext" style="background-color:{{pickercolor1}}">{{text1}}</text>
       </view>
     </picker>
     <view class="describetext">
@@ -13,9 +13,9 @@
   </view>
 
   <view class="flow1" wx:if="{{ifshow2}}">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+    <picker bindchange="bindPickerChange2" value="{{index}}" range="{{realArray}}" disabled="{{disabled2}}">
       <view class="picker">
-        {{playerArray[0].text}}
+        <text class="pickertext" style="background-color:{{pickercolor2}}">{{text2}}</text>
       </view>
     </picker>
     <view class="describetext">
@@ -26,9 +26,9 @@
 
 <view class="flow">
 <view class="flow1"  wx:if="{{ifshow3}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange3" value="{{index}}" range="{{realArray}}" disabled="{{disabled3}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor3}}">{{text3}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -37,9 +37,9 @@
 </view>
 
 <view class="flow1"  wx:if="{{ifshow4}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange4" value="{{index}}" range="{{realArray}}" disabled="{{disabled4}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor4}}">{{text4}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -51,9 +51,9 @@
 <view class="flow">
 
 <view class="flow1"  wx:if="{{ifshow5}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange5" value="{{index}}" range="{{realArray}}" disabled="{{disabled5}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor5}}">{{text5}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -62,9 +62,9 @@
 </view>
 
 <view class="flow1"  wx:if="{{ifshow6}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange6" value="{{index}}" range="{{realArray}}" disabled="{{disabled6}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor6}}">{{text6}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -76,9 +76,9 @@
 <view class="flow">
 
 <view class="flow1"  wx:if="{{ifshow7}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange7" value="{{index}}" range="{{realArray}}" disabled="{{disabled7}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor7}}">{{text7}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -87,9 +87,9 @@
 </view>
 
 <view class="flow1"  wx:if="{{ifshow8}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange8" value="{{index}}" range="{{realArray}}" disabled="{{disabled8}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor8}}">{{text8}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -101,9 +101,9 @@
 <view class="flow">
 
 <view class="flow1"  wx:if="{{ifshow9}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange9" value="{{index}}" range="{{realArray}}" disabled="{{disabled9}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor9}}">{{text9}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -112,9 +112,9 @@
 </view>
 
 <view class="flow1"  wx:if="{{ifshow10}}">
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" disabled="{{disabledq}}">
+  <picker bindchange="bindPickerChange10" value="{{index}}" range="{{realArray}}" disabled="{{disabled10}}">
     <view class="picker">
-      {{playerArray[0].text}}
+      <text class="pickertext" style="background-color:{{pickercolor10}}">{{text10}}</text>
     </view>
   </picker>
   <view class="describetext">
@@ -123,8 +123,17 @@
 </view>
 </view>
 <view class="space2"></view>
-<view class="resultText"><text id="resultText">{{resultText}}</text></view>
+<view class="spacefz" wx:if="{{ifshowstartspace}}"></view>
+<view class="resultText" wx:if="{{ifshowjg}}"><text id="resultText">{{resultText}}</text></view>
 <view class="buttonGroup">
-  <button type="primary" bindtap="getResult">开</button>
+  <view><button type="primary" bindtap="getResult" wx:if="{{ifshowkai}}">开</button></view>
+  <view><button type="primary" bindtap="reStart" wx:if="{{ifshowcz}}">重置</button></view>
+  <view wx:if="{{ifshowstart}}">
+    <picker bindchange="bindPickerChangeRS" value="{{index}}" range="{{renshu}}">
+    <view class="picker">
+      <button type="primary" bindtap="xzrs" >选择人数</button>
+    </view>
+  </picker>
+  </view>
 </view>
   
