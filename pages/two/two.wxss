@@ -2,7 +2,7 @@
   height: 160rpx;
 }
 .space2{
-  height: 160rpx;
+  height: 260rpx;
 }
 .flow{
   display: flex;

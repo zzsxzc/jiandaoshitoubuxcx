@@ -124,20 +124,28 @@ Page({
   getResult() {
     if(!this.data.isopend){
       if(this.data.value1=="未选择"||this.data.value2=="未选择"){
-        wx.showModal({
-          title:"提示",
-          content:"存在用户未选择！是否继续开？",
-          success:(res)=>{
-            if(res.confirm){
-              this.setData({
-                text1: this.data.value1,
-                text2: this.data.value2,
-                resultText:"存在未输入者，不进行结果计算！",
-                isopend:true
-              })
+        if(this.data.value1=="未选择"&&this.data.value2=="未选择"){
+          wx.showToast({
+            title: '未选择不需要开',
+            icon: 'none',
+            duration: 1000
+          })
+        }else{
+          wx.showModal({
+            title:"提示",
+            content:"存在用户未选择！是否继续开？",
+            success:(res)=>{
+              if(res.confirm){
+                this.setData({
+                  text1: this.data.value1,
+                  text2: this.data.value2,
+                  resultText:"存在未输入者，不进行结果计算！",
+                  isopend:true
+                })
+              }
             }
-          }
-        })
+          })
+        }      
       }else{
           var result;
           if(this.data.value1=="剪刀"&&this.data.value2=="剪刀"||this.data.value1=="石头"&&this.data.value2=="石头"||this.data.value1=="布"&&this.data.value2=="布"){
@@ -171,19 +179,59 @@ Page({
   },
   //重置
   reStart:function() {
-    this.setData({
-      value1:"未选择",
-      value2:"未选择",
-      text1:"点击选择",
-      text2:"点击选择",
-      isopend:false,
-      pickercolor1:"#00BFFF",
-      pickercolor2:"#00BFFF",
-      index: 0,
-      resultText: "结果展示",
-      disabled1:false,
-      disabled2:false,
-    })
+    if(this.data.value1!="未选择"||this.data.value2!="未选择"){
+      if(this.data.isopend){
+        this.setData({
+          value1:"未选择",
+          value2:"未选择",
+          text1:"点击选择",
+          text2:"点击选择",
+          isopend:false,
+          pickercolor1:"#00BFFF",
+          pickercolor2:"#00BFFF",
+          index: 0,
+          resultText: "结果展示",
+          disabled1:false,
+          disabled2:false,
+          isopend:false
+        })
+        wx.showToast({
+          title: '已重置',
+          icon: 'none',
+          duration: 1000
+        })
+      }else{
+        wx.showModal({
+          title:"提示",
+          content:"是否确定重置？",
+          success:(res)=>{
+            if(res.confirm){
+              this.setData({
+                value1:"未选择",
+                value2:"未选择",
+                text1:"点击选择",
+                text2:"点击选择",
+                isopend:false,
+                pickercolor1:"#00BFFF",
+                pickercolor2:"#00BFFF",
+                index: 0,
+                resultText: "结果展示",
+                disabled1:false,
+                disabled2:false,
+                isopend:false
+              })
+            }
+          }
+        })
+      }   
+    }else{
+      wx.showToast({
+        title: '数据无须重置',
+        icon: 'none',
+        duration: 1000
+      })
+    }
+    
   },
   onLoad:function(){
     this.randomThree();
