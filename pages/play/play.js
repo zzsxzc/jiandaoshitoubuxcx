@@ -301,7 +301,7 @@ Page({
       text3: "选择完成",
       value3:this.data.realArray[e.detail.value],
       pickercolor3:"	#FF69B4",
-      disabled1:true
+      disabled3:true
     })
     this.randomThree();
   },
@@ -310,7 +310,7 @@ Page({
       text4: "选择完成",
       value4:this.data.realArray[e.detail.value],
       pickercolor4:"	#FF69B4",
-      disabled2:true
+      disabled4:true
     })
     this.randomThree();
   },
@@ -319,7 +319,7 @@ Page({
       text5: "选择完成",
       value5:this.data.realArray[e.detail.value],
       pickercolor5:"#FF69B4",
-      disabled1:true
+      disabled5:true
     })
     this.randomThree();
   },
@@ -328,7 +328,7 @@ Page({
       text6: "选择完成",
       value6:this.data.realArray[e.detail.value],
       pickercolor6:"	#FF69B4",
-      disabled2:true
+      disabled6:true
     })
     this.randomThree();
   },
@@ -337,7 +337,7 @@ Page({
       text7: "选择完成",
       value7:this.data.realArray[e.detail.value],
       pickercolor7:"	#FF69B4",
-      disabled1:true
+      disabled7:true
     })
     this.randomThree();
   },
@@ -346,7 +346,7 @@ Page({
       text8: "选择完成",
       value8:this.data.realArray[e.detail.value],
       pickercolor8:"	#FF69B4",
-      disabled2:true
+      disabled8:true
     })
     this.randomThree();
   },
@@ -355,7 +355,7 @@ Page({
       text9: "选择完成",
       value9:this.data.realArray[e.detail.value],
       pickercolor9:"	#FF69B4",
-      disabled1:true
+      disabled9:true
     })
     this.randomThree();
   },
@@ -364,7 +364,7 @@ Page({
       text10: "选择完成",
       value10:this.data.realArray[e.detail.value],
       pickercolor10:"	#FF69B4",
-      disabled2:true
+      disabled10:true
     })
     this.randomThree();
   },
