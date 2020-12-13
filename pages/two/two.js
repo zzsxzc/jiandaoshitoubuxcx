@@ -235,6 +235,16 @@ Page({
   },
   onLoad:function(){
     this.randomThree();
+  },
+  //分享
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      console.log(res.target)
+    }
+    return {
+      title: '石头剪刀布',
+      path: '/page/user?id=123'
+    }
   }
 
 })
