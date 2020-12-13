@@ -375,7 +375,7 @@ Page({
     }
     return {
       title: '石头剪刀布',
-      path: '/page/user?id=123'
+      path: '/pages/index/index'
     }
   }
 })
